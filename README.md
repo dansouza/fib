@@ -1,5 +1,5 @@
 # fib
-recursive fibonacci in a few languages
+fibonacci in a few languages
 
 ```
 TEST                ELAPSED   HASH                                       RESULT
