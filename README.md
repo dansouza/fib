@@ -3,12 +3,10 @@ recursive fibonacci in a few languages
 
 ```
 TEST                ELAPSED   HASH                                       RESULT
-fib-c               0.919     cca3345004d6efc176a5635d92a92bdc4609bee9   PASS
-fib-go              1.851     cca3345004d6efc176a5635d92a92bdc4609bee9   PASS
-fib-go-multicore    0.775     cca3345004d6efc176a5635d92a92bdc4609bee9   PASS
-fib-asm             2.250     cca3345004d6efc176a5635d92a92bdc4609bee9   PASS
-fib-php             32.760    cca3345004d6efc176a5635d92a92bdc4609bee9   PASS
-fib-py              84.015    cca3345004d6efc176a5635d92a92bdc4609bee9   PASS
-fib-js              3.461     cca3345004d6efc176a5635d92a92bdc4609bee9   PASS
-
+fib-c               9.992     411408252ac0d24ad99c6bbd130063ca7e8ff2ee   PASS
+fib-go              19.264    411408252ac0d24ad99c6bbd130063ca7e8ff2ee   PASS
+fib-go-multicore    8.356     411408252ac0d24ad99c6bbd130063ca7e8ff2ee   PASS
+fib-go-multimemo    0.003     411408252ac0d24ad99c6bbd130063ca7e8ff2ee   PASS
+fib-asm             19.167    411408252ac0d24ad99c6bbd130063ca7e8ff2ee   PASS
+fib-js              34.142    411408252ac0d24ad99c6bbd130063ca7e8ff2ee   PASS
 ```
