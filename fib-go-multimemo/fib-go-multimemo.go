@@ -22,6 +22,10 @@ var (
 )
 
 func fib(n int) int {
+	if n <= 1 {
+		return n
+	}
+
 	memoLock.RLock()
 	if r, ok := memoList[n]; ok {
 		memoLock.RUnlock()
@@ -29,9 +33,6 @@ func fib(n int) int {
 	}
 	memoLock.RUnlock()
 
-	if n <= 1 {
-		return n
-	}
 	x := fib(n-1) + fib(n-2)
 	memoLock.Lock()
 	memoList[n] = x
