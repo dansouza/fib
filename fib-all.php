@@ -14,6 +14,10 @@ $tests = [
 		"bin" => "./fib-go/fib-go",
 		"build" => "cd fib-go && go build"
 	],
+	"fib-go-multicore" => [
+		"bin" => "./fib-go-multicore/fib-go-multicore",
+		"build" => "cd fib-go-multicore && go build"
+	],
 	"fib-asm" => [
 		"bin" => "./fib-asm/fib-asm",
 		"build" => "cd fib-asm && gcc -o fib-asm fib-asm.s"
@@ -36,7 +40,7 @@ $tests = [
 ];
 
 print "\n";
-print str_pad("TEST", 10) . str_pad("ELAPSED", 10) . str_pad("HASH", 43) . "RESULT" . "\n";
+print str_pad("TEST", 20) . str_pad("ELAPSED", 10) . str_pad("HASH", 43) . "RESULT" . "\n";
 
 foreach ($tests as $test => $info) {
 	if (isset($info['requires']) && !file_exists($info['requires'])) {
@@ -50,7 +54,7 @@ foreach ($tests as $test => $info) {
 	$hash = sha1($output);
 	$pass = ($hash == TEST_SHA1 ? "PASS" : "FAIL");
 
-	print str_pad($test, 10) . str_pad(number_format($elapsed, 3), 10) . str_pad($hash, 43) . $pass . "\n";
+	print str_pad($test, 20) . str_pad(number_format($elapsed, 3), 10) . str_pad($hash, 43) . $pass . "\n";
 }
 
 if ($missing) {
