@@ -1,7 +1,7 @@
 #!/usr/bin/php
 <?php
 
-define('TEST_SHA1', 'cca3345004d6efc176a5635d92a92bdc4609bee9');
+define('TEST_SHA1', '411408252ac0d24ad99c6bbd130063ca7e8ff2ee');
 
 $missing = [];
 
@@ -22,6 +22,12 @@ $tests = [
 		"bin" => "./fib-asm/fib-asm",
 		"build" => "cd fib-asm && gcc -o fib-asm fib-asm.s"
 	],
+	"fib-js" => [
+		"bin" => "nodejs fib-js/fib-js.js",
+		"requires" => "/usr/bin/nodejs",
+		"build" => ""
+	],
+	/*
 	"fib-php" => [
 		"bin" => "php fib-php/fib-php.php",
 		"requires" => "/usr/bin/php",
@@ -32,11 +38,7 @@ $tests = [
 		"requires" => "/usr/bin/python",
 		"build" => ""
 	],
-	"fib-js" => [
-		"bin" => "nodejs fib-js/fib-js.js",
-		"requires" => "/usr/bin/nodejs",
-		"build" => ""
-	],
+	*/
 ];
 
 print "\n";
@@ -57,8 +59,11 @@ foreach ($tests as $test => $info) {
 	print str_pad($test, 20) . str_pad(number_format($elapsed, 3), 10) . str_pad($hash, 43) . $pass . "\n";
 }
 
+print "\n";
+
 if ($missing) {
 	foreach ($missing as $test => $info) {
 		print "[*] skipped '$test' because '{$info['required']}' is missing.\n";
 	}
+	print "\n";	
 }

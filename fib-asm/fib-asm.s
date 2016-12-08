@@ -96,7 +96,7 @@ main:
 
 .testaloop:
         # compara o contador com 40
-        cmpl    $40, -4(%rbp)
+        cmpl    $45, -4(%rbp)
         # se for menor ou igual que 40, roda uma iteracao do loop
         jle     .loop
         # nao eh menor ou igual, loop chegou no final, vaza

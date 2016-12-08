@@ -8,7 +8,7 @@ int fib(int n) {
 }
 
 int main() {
-	for (int x = 0; x <= 40; x++) {
+	for (int x = 0; x <= 45; x++) {
 		printf("fib(%d)=%d\n", x, fib(x));
 	}
 }

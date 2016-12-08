@@ -6,7 +6,7 @@ function fib(n) {
     return fib(n-1)+fib(n-2);
 }
 
-for (var x = 0; x <= 40; x++) {
+for (var x = 0; x <= 45; x++) {
 	console.log("fib(" + x + ")=" + fib(x))
 }
 

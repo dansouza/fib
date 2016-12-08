@@ -9,7 +9,7 @@ import (
 
 const (
 	WORKERS = 8
-	N       = 40
+	N       = 45
 )
 
 var (

@@ -17,7 +17,7 @@ func fib(n int) int {
 }
 
 func main() {
-	for x := 0; x <= 40; x++ {
+	for x := 0; x <= 45; x++ {
 		fmt.Printf("fib(%d)=%d\n", x, fib(x))
 	}
 }

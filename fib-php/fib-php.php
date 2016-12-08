@@ -7,6 +7,6 @@ function fib($n) {
 	return fib($n-1)+fib($n-2);
 }
 
-for ($x = 0; $x <= 40; $x++) {
+for ($x = 0; $x <= 45; $x++) {
 	print "fib($x)=" . fib($x) . "\n";
 }

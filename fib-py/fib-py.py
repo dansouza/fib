@@ -6,5 +6,5 @@ def fib(n):
     else: return fib(n-1)+fib(n-2)
 
 if __name__ == "__main__":
-	for x in range(0, 41):
+	for x in range(0, 46):
 		print "fib(%d)=%d" % (x, fib(x))
