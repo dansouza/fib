@@ -15,22 +15,10 @@ fib:
 
         # pega o contador do loop (argumento passado pra funcao) e joga pra -20(%rbp)
         movl    %edi, -20(%rbp)
-        # compara com 0
-        cmpl    $0, -20(%rbp)
-        # se for diferente de zero, testa se eh diferente de 1
-        jne     .testa_diferente_um
-        # eh igual a 0... retorna 0 e vaza
-        movl    $0, %eax
-        jmp     .vaza
-
-.testa_diferente_um:
-        # compara o argumento da fib() com 1
+        # compara <= 1
         cmpl    $1, -20(%rbp)
-        # se for diferente de 1, continua rodando a bagaca
-        jne     .calcula_fib
-        # eh igual a 1! retorna 1 e vaza
-        movl    $1, %eax
-        jmp     .vaza
+        # se for <= 1, vai pra menor_igual_um
+        jle     .menor_igual_um
 
 .calcula_fib:
         # pega o argumento da fib() e joga em %eax
@@ -62,6 +50,12 @@ fib:
         popq    %rbx
         popq    %rbp
         ret
+
+.menor_igual_um:
+        # joga o primeiro argumento (0 ou 1) pra %eax
+        movl -20(%rbp), %eax
+        # retorna
+        jmp     .vaza
 
 main:
         # configura a stack da main() com 16 bytes
