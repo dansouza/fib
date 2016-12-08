@@ -22,6 +22,10 @@ $tests = [
 		"bin" => "./fib-go-multimemo/fib-go-multimemo",
 		"build" => "cd fib-go-multimemo && go build"
 	],
+	"fib-go-iter" => [
+		"bin" => "./fib-go-iter/fib-go-iter",
+		"build" => "cd fib-go-iter && go build"
+	],
 	"fib-asm" => [
 		"bin" => "./fib-asm/fib-asm",
 		"build" => "cd fib-asm && gcc -o fib-asm fib-asm.s"
